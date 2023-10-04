@@ -21,7 +21,7 @@ helm install my-release grafana/grafana
 
 ## Uninstalling the Chart
 
-To uninstall/delete the my-release deployment:
+To uninstall/delete the `my-release` deployment:
 
 ```console
 helm delete my-release
@@ -301,8 +301,8 @@ ingress:
 
 ### Example of extraVolumeMounts
 
-Volume can be type persistentVolumeClaim or hostPath but not both at same time.
-If neither existingClaim or hostPath argument is given then type is emptyDir.
+Volume can be type `persistentVolumeClaim` or `hostPath` but not both at same time.
+If neither `existingClaim` or `hostPath` argument is given then type is `emptyDir`.
 
 ```yaml
 - extraVolumeMounts:
@@ -365,8 +365,8 @@ If this entry is not set or is equals to false not decoding is applied to the fi
 
 ### Gerrit use case
 
-Gerrit API for download files has the following schema: <https://yourgerritserver/a/{project-name}/branches/{branch-id}/files/{file-id}/content> where {project-name} and
-{file-id} usually has '/' in their values and so they MUST be replaced by %2F so if project-name is user/repo, branch-id is master and file-id is equals to dir1/dir2/dashboard
+Gerrit API for download files has the following schema: <https://yourgerritserver/a/{project-name}/branches/{branch-id}/files/{file-id}/content> where `{project-name}` and
+`{file-id}` usually has '/' in their values and so they MUST be replaced by `%2F` so if project-name is user/repo, branch-id is master and file-id is equals to dir1/dir2/dashboard
 the url value is <https://yourgerritserver/a/user%2Frepo/branches/master/files/dir1%2Fdir2%2Fdashboard/content>
 
 ## Sidecar for dashboards
@@ -598,7 +598,7 @@ grafana.ini:
 
 This example uses Grafana [file providers](https://grafana.com/docs/grafana/latest/administration/configuration/#file-provider) for secret values and the `extraSecretMounts` configuration flag (Additional grafana server secret mounts) to mount the secrets.
 
-In grafana.ini:
+In `grafana.ini`:
 
 ```yaml
 grafana.ini:
